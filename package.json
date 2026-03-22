@@ -140,7 +140,11 @@
   },
   "scripts": {
     "build": "turbo run build --concurrency=100% --no-daemon",
+    "predeploy": "medusa db:migrate",
+    "start": "medusa start",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts,.tsx .",
+    "lint:fix": "yarn lint --fix",
+    "test": "turbo run test",
     "lint:path": "eslint --ignore-path .eslintignore --ext .js,.ts,.tsx",
     "prettier": "prettier",
     "jest": "jest",
